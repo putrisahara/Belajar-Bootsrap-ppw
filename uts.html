@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+</head>
+<body>
+    <form name="formregis">
+        <table>
+            <tr>
+                <th colspan="2" style="color: rgb(0, 25, 107); text-align: center; font-size: large;">Registrasi Anggota</th>
+            </tr>
+
+            <tr>
+                <td style="padding-top: 5px; word-spacing: 5px;"> <label for="uname">Username :</label> </td>
+                <td> <input type="text" name="uname" id="uname" style="border: none;"></td>
+            </tr>
+            <tr>
+                    <td style="padding-top: 5px; word-spacing: 10px;"> <label for="pass">Password :</label> </td>
+                    <td> <input type="password" name="pass" id="pass" style="border: none;"></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><button type="submit" class="btn btn-primary" onclick="regis()">Register</button>&nbsp;
+                    <button type="reset" class="btn btn-danger">Reset</button>
+               </td>
+            </tr>
+        </table>
+    </form>
+    <script>
+        function regis(){
+            let uname=document.formregis.uname.value;
+            let pass=document.formregis.pass.value;
+            if (uname == ""|| pass ==""){
+                alert("Data Username atau Password belum Diisi")
+            } else if (uname =="Lala"|| uname == "Lili"){
+                alert("Username Sudah Terdaftar")
+            } else{
+                alert("Registrasi Berhasil")
+            }
+        }
+    </script>
+</body>
+</html>

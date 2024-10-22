@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function nilaiMahasiswa() {
+            let nilaiInput = document.forms["nilai"]["nilai"].value;
+            let hasil;
+
+            let nilai = parseFloat(nilaiInput);
+
+            if (nilai >= 80 && nilai <= 100) {
+                alert("Selamat, Anda mendapatkan nilai : A ");
+            } else if (nilai >= 75 && nilai < 80) {
+                alert("Selamat,Anda mendapatkan nilai  : B+ ");
+            } else if (nilai >= 70 && nilai < 75) {
+                alert("Anda mendapatkan Nilai : B ");
+            } else if (nilai >= 65 && nilai < 70) {
+                alert("Anda mendapatkan Nilai : C+ ");
+            } else if (nilai >= 60 && nilai < 65) {
+                alert("Anda mendapatkan Nilai : C ");
+            } else if (nilai >= 55 && nilai < 60) {
+                alert("Anda mendapatkan Nilai : D ");
+            } else if (nilai >= 0 && nilai < 55) {
+                alert("Sayang sekali Anda mendapatkan nilai: E ");
+            }
+        }
+
+    </script>
+</head>
+
+<body>
+    <form name="nilai">
+        <table>
+            <tr>
+                <td>Input Nilai</td>
+                <td><input type="textbox" name="nilai" size="5" required></td>
+                <td><button type="button" onclick="nilaiMahasiswa()">Cek Nilai</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

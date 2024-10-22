@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="formdaftar">
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td><input type="textbox" name="nama" size="30"></td></tr>
+        <tr><td>Password</td>
+        <td><input type="password"name="sandi" size="30"></td></tr>
+        <tr>
+            <td></td>
+            <td> <button type="button" onclick="proses()"nama="submit">Daftar
+            </button>&nbsp;<button type="reset">Reset</button></td>
+        </tr>
+        </table>
+        </form>
+        <script>
+            function proses()
+            {
+                let nama=document.formdaftar.nama.value;
+                let password=document.formdaftar.sandi.value;
+                document.write("Data yang anda input adalah:<br>");
+                document.write("Nama :"+nama+"<br>");
+                document.write("Password:"+password);
+            }
+        </script>
+        <script type="text/javascript">
+var penjumlahan = 10+2;
+var pengurangan = 10-2;
+var perkalian = 10*2;
+var pembagian = 10*2;
+        </script>
+ 
+</body>
+</html>

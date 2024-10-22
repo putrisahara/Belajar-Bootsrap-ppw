@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function nilaiMahasiswa() {
+            let nilaiInput = document.forms["nilai"]["nilai"].value;
+            let grade;
+
+            let nilai = parseFloat(nilaiInput);
+
+            if (nilai >= 80) {
+                grade = 'A';
+            } else if (nilai >= 75 && nilai < 80) {
+                grade = 'B+';
+            } else if (nilai >= 70 && nilai < 75) {
+                grade = 'B';
+            } else {
+                grade = 'C+';
+            }
+
+            alert("Nilai : " + grade);
+        }
+
+    </script>
+</head>
+
+<body>
+    <form name="nilai">
+        <table>
+            <tr>
+                <td>Input Nilai</td>
+                <td><input type="textbox" name="nilai" size="5" required></td>
+                <td><button type="button" onclick="Nilai Mahasiswa()">Cek Nilai</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

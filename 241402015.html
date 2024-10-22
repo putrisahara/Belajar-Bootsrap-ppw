@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form name="form">
+<input type="number" name="pulsa" id="pulsa"size="30"
+ placeholder="Nominal Isi Pulsa"> <br>
+ <input type="radio" name="kartu" id="Telkomsel"
+value="Telkomsel"> 
+<label for="Telkomsel">Telkomsel</label>
+<input type="radio" name="kartu" id="Indosat"
+value="Indosat"> 
+<label for="Indosat">Indosat</label>
+<input type="radio" name="kartu" id="XL"
+value="XL"> 
+<label for="XL">XL</label><br>
+<button type="button" onclick="hitung()"> Biaya</button>
+</form>
+<script>
+    function hitung(){
+        let pulsa = parseInt ( document.form.pulsa.value);
+        let kartu = document.form.kartu.value;
+        let diskon = 0;
+        let hasil = 0;
+        
+        if(kartu == "Telkomsel"){
+            diskon=0.1;
+            hasil=pulsa - (pulsa * diskon)
+            alert(`diskon 10% biaya : ${hasil}`);
+        }else if(kartu == "Indosat"){
+            diskon=0.05;
+            hasil=pulsa - (pulsa * diskon)
+            alert (`diskon 5% biaya : ${hasil}`);
+        }else if(kartu == "XL"){
+            diskon=0.02;
+            hasil=pulsa - (pulsa * diskon)
+            alert (`diskon 2% biaya : ${hasil}`);
+        }
+        }
+    
+</script>
+</body>
+</html>
